@@ -1,0 +1,29 @@
+:root {
+  --bg-body: #001632;
+  --h1-color: #808a99;
+}
+
+/* ------------------------------- */
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--bg-body);
+  height: 100vh;
+  color: white;
+}
+
+.a-container {
+  width: 80%;
+  max-width: 1000px;
+  margin: 100px auto;
+}
+
+
+h1 {
+  color: var(--h1-color);
+  font-size: 2.5rem;
+}
+
+h2 {
+  text-align: center;
+}
