@@ -1,59 +1,6 @@
 <?
-$min = 8;
-$max = 32;
-$message = "Devi scegliere una password con un min di $min e un max di $max caratteri";
-$error = '';
-$css_alert = 'info';
 
-$caratteri_minuscoli = 'q,w,e,r,t,y,u,i,o,p,a,s,d,f,g,h,j,k,l,z,x,c,v,b,n,m';
-$caratteri_maiuscoli = 'Q,W,E,R,T,Y,U,I,O,P,A,S,D,F,G,H,J,K,L,Z,X,C,V,B,N,M';
-$caratteri_numerici = '1,2,3,4,5,6,7,8,9,0';
-$caratteri_speciali = '\,|,!,",£,$,%,&,/,(,),=,?,^,*,é,§,ç,°,_,:,;,.,-,ò,à,ù,è';
-
-if (isset($_POST['length']) && !empty($_POST['length'])) {
-  $length = $_POST['length'];
-  var_dump($length);
-
-  if ($length < 8 || $length > 32) {
-    $error = 'Errore! ';
-  }
-}
-
-
-// if (isset($_POST['password_length']) && !empty($_POST['password_length'])) {
-
-//   $passlen = $_POST['password_length'];
-
-//   // controllo se il valore inserito è corretto
-//   if ($_POST['password_length'] < $min || $_POST['password_length'] > $max) {
-//     $message = "Errore! La lunghezza della password deve essere compresa tra $min e $max caratteri";
-//     $css_alert = 'danger';
-//   } else {
-//     $characters = 'qwertyuiopasdfghjklzxcvbnm';
-//     for ($i = 0; $i < $passlen; $i++) {
-
-//     }
-//   }
-
-// }
-
-
-
-
-// $message = "Scegliere una password con un minimo di 8 caratteri e un massimo di 32 caratteri";
-
-// $limit = $_POST["ciao"];
-
-// $caratteri_minuscoli = 'q,w,e,r,t,y,u,i,o,p,a,s,d,f,g,h,j,k,l,z,x,c,v,b,n,m';
-// $caratteri_maiuscoli = 'Q,W,E,R,T,Y,U,I,O,P,A,S,D,F,G,H,J,K,L,Z,X,C,V,B,N,M';
-// $caratteri_numerici = '1,2,3,4,5,6,7,8,9,0';
-// $caratteri_speciali = '\,|,!,",£,$,%,&,/,(,),=,?,^,*,é,§,ç,°,_,:,;,.,-,ò,à,ù,è,+,[,]{,},@,#,<,>';
-
-// $caratteri_all = $caratteri_minuscoli . ',' . $caratteri_maiuscoli . ',' . $caratteri_numerici . ',' . $caratteri_speciali;
-// $caratteri[] = explode(',', $caratteri_all);
-// $password = [];
-
-// var_dump($caratteri);
+require_once __DIR__ . './function.php';
 
 ?>
 
@@ -104,7 +51,9 @@ if (isset($_POST['length']) && !empty($_POST['length'])) {
 
         </form>
 
-        <p class="my-3 ">La password generata: </p>
+        <p class="my-3 ">La password generata:
+          <? echo $password ?>
+        </p>
 
       </div>
 
